@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #foodForm {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    margin-bottom: 10px;
+  }
+  
+  #foodList,
+  #totalCalories {
+    margin-top: 20px;
+  }
+  
+  #foodItems {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #foodItems li {
+    margin-bottom: 5px;
+  }
+  
+  #totalCalories h2 {
+    margin-top: 0;
+  }
+  
+  #calorieCount {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
