@@ -1,5 +1,3 @@
-// script.js
-
 // Define the Food class
 class Food {
   constructor(name, calories) {
@@ -8,31 +6,8 @@ class Food {
   }
 }
 
-// Initialize an array to store food items
-const foodArray = [
-  new Food("Banana", 105),
-  new Food("Hot Dog", 565)
-];
-
-// Function to display the food list
-function displayFoodList() {
-  const foodList = document.getElementById("foodItems");
-  foodList.innerHTML = "";
-
-  // Iterate over the food array and create list items
-  foodArray.forEach(food => {
-    const li = document.createElement("li");
-    li.innerText = `${food.name} - ${food.calories} calories`;
-    foodList.appendChild(li);
-  });
-}
-
-// Function to update the total calorie count
-function updateCalorieCount() {
-  const calorieCountElement = document.getElementById("calorieCount");
-  const totalCalories = foodArray.reduce((sum, food) => sum + food.calories, 0);
-  calorieCountElement.innerText = totalCalories;
-}
+// Initialize an empty array to store food items
+const foodArray = [];
 
 // Event listener for the "Add Food" button
 const addButton = document.getElementById("addButton");
@@ -57,7 +32,26 @@ addButton.addEventListener("click", () => {
   caloriesInput.value = "";
 });
 
+// Function to display the food list
+function displayFoodList() {
+  const foodList = document.getElementById("foodItems");
+  foodList.innerHTML = "";
+
+  // Iterate over the food array and create list items
+  foodArray.forEach(food => {
+    const li = document.createElement("li");
+    li.innerText = `${food.name} - ${food.calories} calories`;
+    foodList.appendChild(li);
+  });
+}
+
+// Function to update the total calorie count
+function updateCalorieCount() {
+  const calorieCountElement = document.getElementById("calorieCount");
+  const totalCalories = foodArray.reduce((sum, food) => sum + food.calories, 0);
+  calorieCountElement.innerText = totalCalories;
+}
+
 // Initial display of the food list and total calorie count
 displayFoodList();
 updateCalorieCount();
- 
